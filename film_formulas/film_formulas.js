@@ -18,7 +18,7 @@ function timecode2frames(input) {
   return frame;
 }
 
-function timecode2seconds(input) {
+function timecode2sec(input) {
   input = input.toString()
 
   var array = [{}];
@@ -30,7 +30,19 @@ function timecode2seconds(input) {
   s = parseInt(array[2], 10);
   f = parseInt(array[3], 10);
 
-  var frame = (f + ( (s + (m * 60) + (h * 3600) ) * Math.round(24) ))/24;
+  var second = (f + ( (s + (m * 60) + (h * 3600) ) * Math.round(24) ))/24;
 
-  return frame;
+  return second;
+}
+
+function feet2sec(input) {
+  var sec = (input*16) / 24;
+
+  return sec;
+}
+
+function sec2feet(input) {
+  var feet = (input*24) / 16;
+
+  return feet;
 }
