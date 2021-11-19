@@ -1,6 +1,10 @@
 // TIME CALCULATIONS
 // assumes 24 fps
 
+/**
+ * Converts timecode to frames. Takes HH:MM:SS:FF format. Assumes 24 fps.
+ * @customfunction
+ */
 function timecode2frames(input) {
   input = input.toString()
 
@@ -66,9 +70,7 @@ function sec2timecode(input) {
 }
 
 function add_timecode(input) {
-  return Array.isArray(input) ?
-      input.map(row => row.map(cell => cell * 2)) :
-      input * 2;
+
 }
 
 /**
@@ -89,7 +91,6 @@ function DOUBLE(input) {
  * Subtract timecodes. input1 - input2
  *
  * @param Two cells containing HH:MM:SS:FF timecodes
- * @return Input1 minus input2.
  * @customfunction
  */
 function subtract_timecode(input1, input2) {
