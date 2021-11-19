@@ -1,4 +1,4 @@
-// TIMECODE CALCULATIONS
+// TIME CALCULATIONS
 // assumes 24 fps
 
 function timecode2frames(input) {
@@ -45,4 +45,22 @@ function sec2feet(input) {
   var feet = (input*24) / 16;
 
   return feet;
+}
+
+function frames2timecode(input) {
+  var f = input % 24;
+  var s = Math.floor(input / 24)
+  var h = Math.floor(s / 3600);
+  var m = Math.floor( (s / 60) % 60);
+  var s = (s % 60);
+
+  var timecode = ("00" + String(h)).slice(-2).concat( ":", ("00" + String(m)).slice(-2), ":", ("00" + String(s)).slice(-2), ":", ("00" + String(f)).slice(-2) );
+
+  return timecode;
+}
+
+function sec2timecode(input) {
+  var frame = input * 24;
+
+  return frames2timecode(frame);
 }
