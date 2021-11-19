@@ -22,6 +22,10 @@ function timecode2frames(input) {
   return frame;
 }
 
+/**
+ * Converts timecode to seconds. Takes HH:MM:SS:FF format. Assumes 24 fps.
+ * @customfunction
+ */
 function timecode2sec(input) {
   input = input.toString()
 
@@ -39,18 +43,30 @@ function timecode2sec(input) {
   return second;
 }
 
+/**
+ * Converts footage to seconds. Assumes 24 fps.
+ * @customfunction
+ */
 function feet2sec(input) {
   var sec = (input*16) / 24;
 
   return sec;
 }
 
+/**
+ * Converts seconds to footage. Assumes 24 fps.
+ * @customfunction
+ */
 function sec2feet(input) {
   var feet = (input*24) / 16;
 
   return feet;
 }
 
+/**
+ * Converts frames to timecode. Assumes 24 fps.
+ * @customfunction
+ */
 function frames2timecode(input) {
   var f = input % 24;
   var s = Math.floor(input / 24)
@@ -63,6 +79,10 @@ function frames2timecode(input) {
   return timecode;
 }
 
+/**
+ * Converts seconds to timecode. Assumes 24 fps.
+ * @customfunction
+ */
 function sec2timecode(input) {
   var frame = input * 24;
 
