@@ -3,6 +3,7 @@
 
 /**
  * Converts timecode to frames. Takes HH:MM:SS:FF format. Assumes 24 fps.
+ * @param {Object} input - Input can be a cell (A1) or timecode in quotes ("HH:MM:SS:FF")
  * @customfunction
  */
 function timecode2frames(input) {
@@ -24,6 +25,7 @@ function timecode2frames(input) {
 
 /**
  * Converts timecode to seconds. Takes HH:MM:SS:FF format. Assumes 24 fps.
+ * @param {Object} input - Input can be a cell (A1) or timecode in quotes ("HH:MM:SS:FF")
  * @customfunction
  */
 function timecode2sec(input) {
