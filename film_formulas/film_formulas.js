@@ -91,6 +91,10 @@ function sec2timecode(input) {
   return frames2timecode(frame);
 }
 
+/**
+* Adds timecodes.
+* @customfunction
+*/
 function add_timecode(input) {
 
 }
