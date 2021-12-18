@@ -99,6 +99,7 @@ function sec2timecode(input) {
 
 /**
 * Adds timecodes.
+
 * @customfunction
 */
 function add_timecode(input) {
