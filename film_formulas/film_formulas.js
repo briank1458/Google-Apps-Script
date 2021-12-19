@@ -50,6 +50,7 @@ function timecode2sec(input) {
 /**
  * Converts footage to seconds. Assumes 24 fps.
  *
+ * @param {Object} input - Input can be a cell (A1) or a number
  * @customfunction
  */
 function feet2sec(input) {
@@ -61,6 +62,7 @@ function feet2sec(input) {
 /**
  * Converts seconds to footage. Assumes 24 fps.
  *
+ * @param {Object} input - Input can be a cell (A1) or a number
  * @customfunction
  */
 function sec2feet(input) {
@@ -72,6 +74,7 @@ function sec2feet(input) {
 /**
  * Converts frames to timecode. Assumes 24 fps.
  *
+ * @param {Object} input - Input can be a cell (A1) or a number
  * @customfunction
  */
 function frames2timecode(input) {
