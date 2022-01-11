@@ -8,7 +8,8 @@
  * @customfunction
  */
 function timecode2frames(input) {
-  input = input.toString()
+  // input = input.toString()
+  input = "" + input
 
   var array = [{}];
 
@@ -102,11 +103,13 @@ function sec2timecode(input) {
 
 /**
 * Adds timecodes.
-
+*
+* @param Two cells containing HH:MM:SS:FF timecodes
 * @customfunction
 */
-function add_timecode(input) {
-
+function add_timecode(input1, input2) {
+  var frame = timecode2frames(input1) + timecode2frames(input2);
+  return frames2timecode(frame);
 }
 
 /**
